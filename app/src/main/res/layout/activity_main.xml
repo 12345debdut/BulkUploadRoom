@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/delete_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteData"
+        android:text="Delete data"
+        app:layout_constraintBottom_toTopOf="@+id/load_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+
+    <Button
+        android:id="@+id/load_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="uploadData"
+        android:text="Load Data"
+        app:layout_constraintBottom_toTopOf="@+id/uploading_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_data" />
+
+    <TextView
+        android:id="@+id/uploading_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploading_Status"
+        app:layout_constraintBottom_toTopOf="@+id/timing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/load_data" />
+
+    <TextView
+        android:id="@+id/timing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timing"
+        app:layout_constraintBottom_toTopOf="@+id/delete_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploading_status" />
+
+    <TextView
+        android:id="@+id/delete_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deleting_Status"
+        app:layout_constraintBottom_toTopOf="@+id/content_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timing" />
+
+    <TextView
+        android:id="@+id/content_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Content number"
+        app:layout_constraintBottom_toTopOf="@+id/attr_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_status" />
+
+    <TextView
+        android:id="@+id/attr_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attribute_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
